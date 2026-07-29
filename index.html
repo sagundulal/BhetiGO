@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>BhetiGO | Campus Lost &amp; Found</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ============ NAVBAR ============ -->
+  <!-- Every link below calls showPage() instead of loading a new file.
+       This keeps the whole site inside one HTML page. -->
+  <nav class="navbar">
+    <div class="logo">Bheti<span>GO</span></div>
+    <ul class="nav-links">
+      <li><a href="#" class="nav-link active" data-page="home" onclick="showPage('home')">Home</a></li>
+      <li><a href="#" class="nav-link" data-page="browse" onclick="showPage('browse')">Browse Items</a></li>
+      <li><a href="#" class="nav-link" data-page="report-lost" onclick="showPage('report-lost')">Report Lost</a></li>
+      <li><a href="#" class="nav-link" data-page="report-found" onclick="showPage('report-found')">Report Found</a></li>
+      <li><a href="#" class="nav-link" data-page="admin" onclick="showPage('admin')">Admin</a></li>
+      <li><a href="#" class="nav-link" data-page="contact" onclick="showPage('contact')">Contact</a></li>
+    </ul>
+    <div class="nav-buttons">
+      <a href="#" class="btn btn-outline btn-small" onclick="showPage('login')">Log In</a>
+      <a href="#" class="btn btn-primary btn-small" onclick="showPage('login')">Register</a>
+    </div>
+  </nav>
+
+
+  <!-- =========================================================
+       PAGE: HOME
+       ========================================================= -->
+  <section id="home" class="page active">
+
+    <div class="hero">
+      <h1>Lost something on campus? <span>BhetiGO</span> helps you find it.</h1>
+      <p>A simple, organized platform for Apex College students and staff to report,
+        search, and recover lost belongings — from ID cards to earphones.</p>
+      <div class="hero-buttons">
+        <a href="#" class="btn btn-primary" onclick="showPage('report-lost')">Report a Lost Item</a>
+        <a href="#" class="btn btn-outline" onclick="showPage('report-found')">Report a Found Item</a>
+      </div>
+
+      <div class="stats-row">
+        <div class="stat-box">
+          <h2>128</h2>
+          <p>Items Reported</p>
+        </div>
+        <div class="stat-box">
+          <h2>94</h2>
+          <p>Items Returned</p>
+        </div>
+        <div class="stat-box">
+          <h2>310</h2>
+          <p>Registered Users</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section container">
+      <h2 class="section-title">Recently Reported Items</h2>
+      <p class="section-subtitle">The latest lost and found posts from around campus.</p>
+
+      <div class="card-grid">
+
+        <div class="item-card">
+          <div class="item-thumb">🎧</div>
+          <div class="item-body">
+            <span class="tag tag-lost">Lost</span>
+            <h3>Black Earphones</h3>
+            <p>Library, 2nd Floor · 6 July 2026</p>
+            <div class="item-footer">
+              <a href="#" class="btn btn-outline btn-small" onclick="showPage('item-details')">View</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="item-card">
+          <div class="item-thumb">🪪</div>
+          <div class="item-body">
+            <span class="tag tag-found">Found</span>
+            <h3>College ID Card</h3>
+            <p>Main Gate, Apex College · 5 July 2026</p>
+            <div class="item-footer">
+              <a href="#" class="btn btn-outline btn-small" onclick="showPage('item-details')">View</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="item-card">
+          <div class="item-thumb">👜</div>
+          <div class="item-body">
+            <span class="tag tag-lost">Lost</span>
+            <h3>Grey Backpack</h3>
+            <p>Canteen · 4 July 2026</p>
+            <div class="item-footer">
+              <a href="#" class="btn btn-outline btn-small" onclick="showPage('item-details')">View</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="item-card">
+          <div class="item-thumb">⌚</div>
+          <div class="item-body">
+            <span class="tag tag-pending">Pending</span>
+            <h3>Digital Wristwatch</h3>
+            <p>Computer Lab · 3 July 2026</p>
+            <div class="item-footer">
+              <a href="#" class="btn btn-outline btn-small" onclick="showPage('item-details')">View</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="section container">
+      <h2 class="section-title">How BhetiGO Works</h2>
+      <p class="section-subtitle">Three simple steps to report or recover an item.</p>
+
+      <div class="card-grid">
+        <div class="item-card">
+          <div class="item-body">
+            <h3>1. Report</h3>
+            <p>Submit details of an item you lost or found using a simple form with
+              item name, description, date, and location.</p>
+          </div>
+        </div>
+        <div class="item-card">
+          <div class="item-body">
+            <h3>2. Search &amp; Match</h3>
+            <p>Browse or filter posted items by category and location to find a
+              possible match.</p>
+          </div>
+        </div>
+        <div class="item-card">
+          <div class="item-body">
+            <h3>3. Claim &amp; Verify</h3>
+            <p>Send a claim request. The admin verifies ownership before the item
+              is handed over.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+
+  <!-- =========================================================
+       PAGE: LOGIN / REGISTER
+       ========================================================= -->
+  <section id="login" class="page">
+    <div class="section container">
+      <div class="form-wrapper">
+
+        <div class="tab-buttons">
+          <button type="button" class="active" onclick="showFormTab('login-form')">Log In</button>
+          <button type="button" onclick="showFormTab('register-form')">Register</button>
+        </div>
+
+        <div id="login-form" class="tab-content active">
+          <form action="#" method="POST">
+            <div class="form-group">
+              <label for="login-email">Email Address</label>
+              <input type="email" id="login-email" name="email" placeholder="you@apexcollege.edu.np" required>
+            </div>
+            <div class="form-group">
+              <label for="login-password">Password</label>
+              <input type="password" id="login-password" name="password" placeholder="Enter your password" required>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width:100%;">Log In</button>
+          </form>
+          <p class="form-note">Don't have an account? <a href="#" onclick="showFormTab('register-form')">Register here</a></p>
+        </div>
+
+        <div id="register-form" class="tab-content">
+          <form action="#" method="POST">
+            <div class="form-group">
+              <label for="reg-name">Full Name</label>
+              <input type="text" id="reg-name" name="fullname" placeholder="e.g. Sagun Dulal" required>
+            </div>
+            <div class="form-group">
+              <label for="reg-roll">Roll Number</label>
+              <input type="text" id="reg-roll" name="roll" placeholder="e.g. 2025-bcsit-208" required>
+            </div>
+            <div class="form-group">
+              <label for="reg-email">Email Address</label>
+              <input type="email" id="reg-email" name="email" placeholder="you@apexcollege.edu.np" required>
+            </div>
+            <div class="form-group">
+              <label for="reg-password">Password</label>
+              <input type="password" id="reg-password" name="password" placeholder="Create a password" required>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width:100%;">Create Account</button>
+          </form>
+          <p class="form-note">Already registered? <a href="#" onclick="showFormTab('login-form')">Log in here</a></p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =========================================================
+       PAGE: REPORT LOST ITEM
+       ========================================================= -->
+  <section id="report-lost" class="page">
+    <div class="section container">
+      <h2 class="section-title">Report a Lost Item</h2>
+      <p class="section-subtitle">Fill in the details below. The more specific you are, the easier it is for someone to identify your item.</p>
+
+      <div class="form-wrapper">
+        <form action="#" method="POST">
+
+          <div class="form-group">
+            <label for="lost-item-name">Item Name</label>
+            <input type="text" id="lost-item-name" name="item_name" placeholder="e.g. Black Wallet" required>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="lost-category">Category</label>
+              <select id="lost-category" name="category" required>
+                <option value="">Select category</option>
+                <option value="wallet">Wallet</option>
+                <option value="earphones">Earphones</option>
+                <option value="id-card">ID Card</option>
+                <option value="bag">Bag</option>
+                <option value="watch">Watch</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="date-lost">Date Lost</label>
+              <input type="date" id="date-lost" name="date_lost" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="lost-location">Last Seen Location</label>
+            <input type="text" id="lost-location" name="location" placeholder="e.g. Library, 2nd Floor" required>
+          </div>
+
+          <div class="form-group">
+            <label for="lost-description">Description</label>
+            <textarea id="lost-description" name="description" rows="4" placeholder="Describe the item — color, brand, distinguishing marks, etc."></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="lost-photo">Upload Photo (optional)</label>
+            <input type="file" id="lost-photo" name="photo" accept="image/*">
+          </div>
+
+          <div class="form-group">
+            <label for="lost-contact">Your Contact Number</label>
+            <input type="tel" id="lost-contact" name="contact" placeholder="98XXXXXXXX" required>
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="width:100%;">Submit Lost Item Report</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =========================================================
+       PAGE: REPORT FOUND ITEM
+       ========================================================= -->
+  <section id="report-found" class="page">
+    <div class="section container">
+      <h2 class="section-title">Report a Found Item</h2>
+      <p class="section-subtitle">Found something on campus? Help return it to its owner by posting the details here.</p>
+
+      <div class="form-wrapper">
+        <form action="#" method="POST">
+
+          <div class="form-group">
+            <label for="found-item-name">Item Name</label>
+            <input type="text" id="found-item-name" name="item_name" placeholder="e.g. College ID Card" required>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="found-category">Category</label>
+              <select id="found-category" name="category" required>
+                <option value="">Select category</option>
+                <option value="wallet">Wallet</option>
+                <option value="earphones">Earphones</option>
+                <option value="id-card">ID Card</option>
+                <option value="bag">Bag</option>
+                <option value="watch">Watch</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="date-found">Date Found</label>
+              <input type="date" id="date-found" name="date_found" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="found-location">Location Found</label>
+            <input type="text" id="found-location" name="location" placeholder="e.g. Main Gate, Apex College" required>
+          </div>
+
+          <div class="form-group">
+            <label for="found-description">Description</label>
+            <textarea id="found-description" name="description" rows="4" placeholder="Describe the item so the rightful owner can identify it."></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="found-photo">Upload Photo (optional)</label>
+            <input type="file" id="found-photo" name="photo" accept="image/*">
+          </div>
+
+          <div class="form-group">
+            <label for="found-contact">Your Contact Number</label>
+            <input type="tel" id="found-contact" name="contact" placeholder="98XXXXXXXX" required>
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="width:100%;">Submit Found Item Report</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =========================================================
+       PAGE: BROWSE ITEMS
+       ========================================================= -->
+  <section id="browse" class="page">
+    <div class="section container">
+      <h2 class="section-title">Browse Lost &amp; Found Items</h2>
+      <p class="section-subtitle">Search and filter through all reported items.</p>
+
+      <div class="filter-bar">
+        <input type="text" placeholder="Search by item name...">
+        <select>
+          <option value="">All Categories</option>
+          <option value="wallet">Wallet</option>
+          <option value="earphones">Earphones</option>
+          <option value="id-card">ID Card</option>
+          <option value="bag">Bag</option>
+          <option value="watch">Watch</option>
+        </select>
+        <select>
+          <option value="">All Status</option>
+          <option value="lost">Lost</option>
+          <option value="found">Found</option>
+          <option value="pending">Pending Claim</option>
+        </select>
+        <button class="btn btn-primary">Search</button>
+      </div>
+
+      <div class="card-grid">
+
+        <div class="item-card">
+          <div class="item-thumb">🎧</div>
+          <div class="item-body">
+            <span class="tag tag-lost">Lost</span>
+            <h3>Black Earphones</h3>
+            <p>Library, 2nd Floor · 6 July 2026</p>
+            <div class="item-footer">
+              <a href="#" class="btn btn-outline btn-small" onclick="showPage('item-details')">View</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="item-card">
+          <div class="item-thumb">🪪</div>
+          <div class="item-body">
+            <span class="tag tag-found">Found</span>
+            <h3>College ID Card</h3>
+            <p>Main Gate, Apex College · 5 July 2026</p>
+            <div class="item-footer">
+              <a href="#" class="btn btn-outline btn-small" onclick="showPage('item-details')">View</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="item-card">
+          <div class="item-thumb">👜</div>
+          <div class="item-body">
+            <span class="tag tag-lost">Lost</span>
+            <h3>Grey Backpack</h3>
+            <p>Canteen · 4 July 2026</p>
+            <div class="item-footer">
+              <a href="#" class="btn btn-outline btn-small" onclick="showPage('item-details')">View</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="item-card">
+          <div class="item-thumb">⌚</div>
+          <div class="item-body">
+            <span class="tag tag-pending">Pending</span>
+            <h3>Digital Wristwatch</h3>
+            <p>Computer Lab · 3 July 2026</p>
+            <div class="item-footer">
+              <a href="#" class="btn btn-outline btn-small" onclick="showPage('item-details')">View</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="item-card">
+          <div class="item-thumb">👛</div>
+          <div class="item-body">
+            <span class="tag tag-found">Found</span>
+            <h3>Brown Wallet</h3>
+            <p>Cafeteria · 2 July 2026</p>
+            <div class="item-footer">
+              <a href="#" class="btn btn-outline btn-small" onclick="showPage('item-details')">View</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="item-card">
+          <div class="item-thumb">🔑</div>
+          <div class="item-body">
+            <span class="tag tag-lost">Lost</span>
+            <h3>Bunch of Keys</h3>
+            <p>Parking Area · 1 July 2026</p>
+            <div class="item-footer">
+              <a href="#" class="btn btn-outline btn-small" onclick="showPage('item-details')">View</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =========================================================
+       PAGE: ITEM DETAILS
+       ========================================================= -->
+  <section id="item-details" class="page">
+    <div class="section container">
+      <div class="details-wrapper">
+
+        <div class="details-image">🎧</div>
+
+        <div class="details-info">
+          <span class="tag tag-lost">Lost</span>
+          <h1>Black Earphones</h1>
+          <p style="color:#a4a6b0;">Reported on 6 July 2026 by a BCSIT student.</p>
+
+          <ul class="details-list">
+            <li><span>Category</span><span>Earphones</span></li>
+            <li><span>Location</span><span>Library, 2nd Floor</span></li>
+            <li><span>Date Lost</span><span>6 July 2026</span></li>
+            <li><span>Status</span><span>Not yet claimed</span></li>
+            <li><span>Reported By</span><span>Registered Student</span></li>
+          </ul>
+
+          <p style="color:#a4a6b0; margin-bottom:20px;">
+            A pair of black wired earphones with a small silver logo on the earbuds.
+            Left inside a laptop bag pocket, possibly in the reading area near the
+            library windows.
+          </p>
+
+          <a href="#" class="btn btn-primary" onclick="showPage('claim-request')">Send Claim Request</a>
+          <a href="#" class="btn btn-outline" onclick="showPage('browse')">Back to Browse</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =========================================================
+       PAGE: CLAIM REQUEST
+       ========================================================= -->
+  <section id="claim-request" class="page">
+    <div class="section container">
+      <h2 class="section-title">Claim Request</h2>
+      <p class="section-subtitle">You're requesting ownership verification for: <strong>Black Earphones</strong></p>
+
+      <div class="form-wrapper">
+        <form action="#" method="POST">
+
+          <div class="form-group">
+            <label for="claimant-name">Your Full Name</label>
+            <input type="text" id="claimant-name" name="claimant_name" placeholder="e.g. Sagun Dulal" required>
+          </div>
+
+          <div class="form-group">
+            <label for="claimant-roll">Roll Number</label>
+            <input type="text" id="claimant-roll" name="claimant_roll" placeholder="e.g. 2025-bcsit-208" required>
+          </div>
+
+          <div class="form-group">
+            <label for="proof">Proof of Ownership</label>
+            <textarea id="proof" name="proof" rows="4" placeholder="Describe a unique detail only the real owner would know (e.g. scratch mark, sticker, serial number)." required></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="claimant-contact">Contact Number</label>
+            <input type="tel" id="claimant-contact" name="claimant_contact" placeholder="98XXXXXXXX" required>
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="width:100%;">Submit Claim Request</button>
+        </form>
+
+        <p class="form-note">Your claim will be reviewed by the admin before the item is released.</p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =========================================================
+       PAGE: ADMIN DASHBOARD
+       ========================================================= -->
+  <section id="admin" class="page">
+    <div class="section container">
+      <h2 class="section-title">Admin Dashboard</h2>
+      <p class="section-subtitle">Manage reported items, approve posts, and verify claim requests.</p>
+
+      <div class="summary-row">
+        <div class="summary-card">
+          <h2>128</h2>
+          <p>Total Items Reported</p>
+        </div>
+        <div class="summary-card">
+          <h2>94</h2>
+          <p>Items Returned</p>
+        </div>
+        <div class="summary-card">
+          <h2>18</h2>
+          <p>Pending Claims</p>
+        </div>
+        <div class="summary-card">
+          <h2>310</h2>
+          <p>Registered Users</p>
+        </div>
+      </div>
+
+      <h2 class="section-title" style="font-size:20px;">All Reported Items</h2>
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Item</th>
+            <th>Category</th>
+            <th>Location</th>
+            <th>Status</th>
+            <th>Reported By</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Black Earphones</td>
+            <td>Earphones</td>
+            <td>Library, 2nd Floor</td>
+            <td><span class="tag tag-lost">Lost</span></td>
+            <td>Sagun Dulal</td>
+            <td>
+              <a href="#" class="btn btn-primary btn-small">Approve</a>
+              <a href="#" class="btn btn-danger btn-small">Remove</a>
+            </td>
+          </tr>
+          <tr>
+            <td>College ID Card</td>
+            <td>ID Card</td>
+            <td>Main Gate</td>
+            <td><span class="tag tag-found">Found</span></td>
+            <td>Anonymous User</td>
+            <td>
+              <a href="#" class="btn btn-primary btn-small">Approve</a>
+              <a href="#" class="btn btn-danger btn-small">Remove</a>
+            </td>
+          </tr>
+          <tr>
+            <td>Grey Backpack</td>
+            <td>Bag</td>
+            <td>Canteen</td>
+            <td><span class="tag tag-lost">Lost</span></td>
+            <td>Anisha Rai</td>
+            <td>
+              <a href="#" class="btn btn-primary btn-small">Approve</a>
+              <a href="#" class="btn btn-danger btn-small">Remove</a>
+            </td>
+          </tr>
+          <tr>
+            <td>Digital Wristwatch</td>
+            <td>Watch</td>
+            <td>Computer Lab</td>
+            <td><span class="tag tag-pending">Pending Claim</span></td>
+            <td>Bikash Shrestha</td>
+            <td>
+              <a href="#" class="btn btn-primary btn-small">Verify</a>
+              <a href="#" class="btn btn-danger btn-small">Reject</a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+
+  <!-- =========================================================
+       PAGE: CONTACT
+       ========================================================= -->
+  <section id="contact" class="page">
+    <div class="section container">
+      <h2 class="section-title">Contact Us</h2>
+      <p class="section-subtitle">Have a question or facing an issue? Send us a message.</p>
+
+      <div class="form-wrapper">
+        <form action="#" method="POST">
+
+          <div class="form-group">
+            <label for="contact-name">Full Name</label>
+            <input type="text" id="contact-name" name="name" placeholder="Your name" required>
+          </div>
+
+          <div class="form-group">
+            <label for="contact-email">Email Address</label>
+            <input type="email" id="contact-email" name="email" placeholder="you@apexcollege.edu.np" required>
+          </div>
+
+          <div class="form-group">
+            <label for="contact-subject">Subject</label>
+            <input type="text" id="contact-subject" name="subject" placeholder="What is this regarding?" required>
+          </div>
+
+          <div class="form-group">
+            <label for="contact-message">Message</label>
+            <textarea id="contact-message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="width:100%;">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============ FOOTER (shown on every page) ============ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h4>BhetiGO</h4>
+          <p style="color:#a4a6b0; font-size:14px;">Campus Lost &amp; Found Management System for Apex College.</p>
+        </div>
+        <div>
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#" onclick="showPage('browse')">Browse Items</a></li>
+            <li><a href="#" onclick="showPage('report-lost')">Report Lost</a></li>
+            <li><a href="#" onclick="showPage('report-found')">Report Found</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Account</h4>
+          <ul>
+            <li><a href="#" onclick="showPage('login')">Log In</a></li>
+            <li><a href="#" onclick="showPage('login')">Register</a></li>
+            <li><a href="#" onclick="showPage('admin')">Admin Dashboard</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Support</h4>
+          <ul>
+            <li><a href="#" onclick="showPage('contact')">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        &copy; 2026 BhetiGO — Minor Project by Sagun Dulal, BCSIT 2nd Semester, Apex College.
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- =========================================================
+       PAGE-SWITCHING SCRIPT
+       Everything lives in ONE html file. Each <section class="page">
+       represents a "page". showPage() just hides every section
+       and reveals the one that was clicked, and updates which
+       nav link looks "active".
+       ========================================================= -->
+  <script>
+    function showPage(pageId) {
+      // Hide every page section
+      document.querySelectorAll('.page').forEach(function (page) {
+        page.classList.remove('active');
+      });
+      // Show only the requested one
+      document.getElementById(pageId).classList.add('active');
+
+      // Update the active state on the top navbar links
+      document.querySelectorAll('.nav-link').forEach(function (link) {
+        link.classList.remove('active');
+        if (link.getAttribute('data-page') === pageId) {
+          link.classList.add('active');
+        }
+      });
+
+      // Scroll to top whenever the page changes
+      window.scrollTo(0, 0);
+    }
+
+    // Switches between the Login and Register forms inside the login page
+    function showFormTab(tabId) {
+      document.querySelectorAll('#login .tab-content').forEach(function (tab) {
+        tab.classList.remove('active');
+      });
+      document.querySelectorAll('#login .tab-buttons button').forEach(function (btn) {
+        btn.classList.remove('active');
+      });
+      document.getElementById(tabId).classList.add('active');
+      event.target.classList.add('active');
+    }
+  </script>
+
+</body>
+</html>

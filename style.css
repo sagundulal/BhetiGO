@@ -1,0 +1,596 @@
+/* =======================================================
+   BhetiGO - Campus Lost & Found Management System
+   Shared Stylesheet
+   ======================================================= */
+
+/* ---------- Reset ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ---------- Theme Variables ---------- */
+:root {
+  --bg-main: #14151a;
+  --bg-card: #1e2027;
+  --bg-card-hover: #262832;
+  --border-color: #33353f;
+  --text-main: #f2f2f2;
+  --text-muted: #a4a6b0;
+  --amber: #f5a623;
+  --amber-dark: #c9840f;
+  --green: #4caf50;
+  --red: #e05252;
+  --radius: 8px;
+}
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* ---------- Navbar ---------- */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 40px;
+  background-color: var(--bg-card);
+  border-bottom: 1px solid var(--border-color);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar .logo {
+  font-size: 22px;
+  font-weight: bold;
+  color: var(--amber);
+}
+
+.navbar .logo span {
+  color: var(--text-main);
+}
+
+.nav-links {
+  display: flex;
+  gap: 28px;
+}
+
+.nav-links li a {
+  color: var(--text-muted);
+  font-size: 15px;
+  transition: color 0.2s;
+}
+
+.nav-links li a:hover,
+.nav-links li a.active {
+  color: var(--amber);
+}
+
+.nav-buttons {
+  display: flex;
+  gap: 12px;
+}
+
+/* ---------- Buttons ---------- */
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: var(--radius);
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.btn:active {
+  transform: scale(0.97);
+}
+
+.btn-primary {
+  background-color: var(--amber);
+  color: #1a1a1a;
+}
+
+.btn-primary:hover {
+  background-color: var(--amber-dark);
+}
+
+.btn-outline {
+  background-color: transparent;
+  border: 1px solid var(--amber);
+  color: var(--amber);
+}
+
+.btn-outline:hover {
+  background-color: var(--amber);
+  color: #1a1a1a;
+}
+
+.btn-small {
+  padding: 6px 14px;
+  font-size: 13px;
+}
+
+.btn-danger {
+  background-color: var(--red);
+  color: #fff;
+}
+
+.btn-danger:hover {
+  background-color: #b83b3b;
+}
+
+/* ---------- Layout Helpers ---------- */
+.container {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.section {
+  padding: 60px 0;
+}
+
+.section-title {
+  font-size: 28px;
+  margin-bottom: 8px;
+}
+
+.section-subtitle {
+  color: var(--text-muted);
+  margin-bottom: 32px;
+}
+
+/* ---------- Hero ---------- */
+.hero {
+  position: relative;
+  text-align: center;
+  padding: 80px 20px 60px;
+  background: linear-gradient(180deg, var(--bg-card) 0%, var(--bg-main) 100%);
+  border-bottom: 1px solid var(--border-color);
+}
+.hero-corner-logo {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.hero-corner-logo img {
+  width: 320px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+.hero h1 {
+  font-size: 40px;
+  margin-bottom: 16px;
+}
+
+.hero h1 span {
+  color: var(--amber);
+}
+
+.hero p {
+  color: var(--text-muted);
+  max-width: 560px;
+  margin: 0 auto 28px;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+/* ---------- Stats Row ---------- */
+.stats-row {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  margin-top: 50px;
+  flex-wrap: wrap;
+}
+
+.stat-box {
+  text-align: center;
+}
+
+.stat-box h2 {
+  color: var(--amber);
+  font-size: 30px;
+}
+
+.stat-box p {
+  color: var(--text-muted);
+  font-size: 14px;
+}
+
+/* ---------- Card Grid ---------- */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+}
+
+.item-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: transform 0.15s, background-color 0.15s;
+}
+
+.item-card:hover {
+  background-color: var(--bg-card-hover);
+  transform: translateY(-4px);
+}
+
+.item-thumb {
+  height: 130px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 48px;
+  background-color: #262832;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.item-body {
+  padding: 16px;
+}
+
+.item-body h3 {
+  font-size: 16px;
+  margin-bottom: 6px;
+}
+
+.item-body p {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-bottom: 10px;
+}
+
+.tag {
+  display: inline-block;
+  font-size: 11px;
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.tag-lost {
+  background-color: rgba(224, 82, 82, 0.15);
+  color: var(--red);
+}
+
+.tag-found {
+  background-color: rgba(76, 175, 80, 0.15);
+  color: var(--green);
+}
+
+.tag-pending {
+  background-color: rgba(245, 166, 35, 0.15);
+  color: var(--amber);
+}
+
+.item-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* ---------- Forms ---------- */
+.form-wrapper {
+  max-width: 520px;
+  margin: 0 auto;
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  padding: 32px;
+}
+
+.form-group {
+  margin-bottom: 18px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 6px;
+  color: var(--text-muted);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border-color);
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  font-size: 14px;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--amber);
+}
+
+.form-row {
+  display: flex;
+  gap: 16px;
+}
+
+.form-row .form-group {
+  flex: 1;
+}
+
+.form-note {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-top: 14px;
+  text-align: center;
+}
+
+.form-note a {
+  color: var(--amber);
+}
+
+/* ---------- Tabs (Login/Register) ---------- */
+.tab-buttons {
+  display: flex;
+  margin-bottom: 24px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.tab-buttons button {
+  flex: 1;
+  padding: 12px;
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  font-size: 15px;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+}
+
+.tab-buttons button.active {
+  color: var(--amber);
+  border-bottom: 2px solid var(--amber);
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+/* ---------- Filter Bar ---------- */
+.filter-bar {
+  display: flex;
+  gap: 14px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.filter-bar input,
+.filter-bar select {
+  padding: 10px 12px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border-color);
+  background-color: var(--bg-card);
+  color: var(--text-main);
+}
+
+.filter-bar input {
+  flex: 1;
+  min-width: 200px;
+}
+
+/* ---------- Item Details Page ---------- */
+.details-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.details-image {
+  height: 320px;
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 90px;
+}
+
+.details-info h1 {
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+
+.details-list {
+  margin: 20px 0;
+}
+
+.details-list li {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border-color);
+  font-size: 14px;
+}
+
+.details-list li span:first-child {
+  color: var(--text-muted);
+}
+
+/* ---------- Table (Admin Dashboard) ---------- */
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.data-table th,
+.data-table td {
+  padding: 14px 16px;
+  text-align: left;
+  font-size: 14px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.data-table th {
+  background-color: #262832;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+.data-table tr:last-child td {
+  border-bottom: none;
+}
+
+/* ---------- Dashboard Summary Cards ---------- */
+.summary-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.summary-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  padding: 20px;
+}
+
+.summary-card h2 {
+  color: var(--amber);
+  font-size: 28px;
+}
+
+.summary-card p {
+  color: var(--text-muted);
+  font-size: 13px;
+  margin-top: 4px;
+}
+
+/* ---------- Footer ---------- */
+.footer {
+  background-color: var(--bg-card);
+  border-top: 1px solid var(--border-color);
+  padding: 40px 0 20px;
+  margin-top: 60px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 30px;
+  margin-bottom: 24px;
+}
+
+.footer-grid h4 {
+  margin-bottom: 12px;
+  color: var(--amber);
+  font-size: 15px;
+}
+
+.footer-grid li {
+  margin-bottom: 8px;
+}
+
+.footer-grid li a {
+  color: var(--text-muted);
+  font-size: 14px;
+}
+
+.footer-grid li a:hover {
+  color: var(--amber);
+}
+
+.footer-bottom {
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 13px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border-color);
+}
+
+/* ---------- Page Switching ---------- */
+/* Every top-level page is hidden by default. showPage() in the JS
+   adds/removes the "active" class to reveal only one at a time. */
+.page {
+  display: none;
+}
+
+.page.active {
+  display: block;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 14px;
+    padding: 16px 20px;
+  }
+
+  .container {
+    padding: 0 20px;
+  }
+
+  .details-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .form-row {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .hero-corner-logo {
+    position: static;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .hero-corner-logo img {
+    width: 100%;
+    max-width: 300px;
+    margin: auto;
+  }
+}
