@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Dashboard | BhetiGO</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <meta name="author" content="Sagun Dulal">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="logo">Bheti<span>GO</span></div>
+    <ul class="nav-links">
+      <li><a href="index.html" class="nav-link">Home</a></li>
+      <li><a href="browse.html" class="nav-link">Browse Items</a></li>
+      <li><a href="report-lost.html" class="nav-link">Report Lost</a></li>
+      <li><a href="report-found.html" class="nav-link">Report Found</a></li>
+      <li><a href="admin.html" class="nav-link active">Admin</a></li>
+      <li><a href="contact.html" class="nav-link">Contact</a></li>
+    </ul>
+    <div class="nav-buttons">
+      <a href="login.html" class="btn btn-outline btn-small">Log In</a>
+      <a href="login.html" class="btn btn-primary btn-small">Register</a>
+    </div>
+  </nav>
+
+  <section id="admin" class="page active">
+    <div class="section container">
+      <h2 class="section-title">Admin Dashboard</h2>
+      <p class="section-subtitle">Manage reported items, approve posts, and verify claim requests.</p>
+
+      <div class="summary-row">
+        <div class="summary-card">
+          <h2>128</h2>
+          <p>Total Items Reported</p>
+        </div>
+        <div class="summary-card">
+          <h2>94</h2>
+          <p>Items Returned</p>
+        </div>
+        <div class="summary-card">
+          <h2>18</h2>
+          <p>Pending Claims</p>
+        </div>
+        <div class="summary-card">
+          <h2>310</h2>
+          <p>Registered Users</p>
+        </div>
+      </div>
+
+      <h2 class="section-title" style="font-size:20px;">All Reported Items</h2>
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Item</th>
+            <th>Category</th>
+            <th>Location</th>
+            <th>Status</th>
+            <th>Reported By</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Black Earphones</td>
+            <td>Earphones</td>
+            <td>Library, 2nd Floor</td>
+            <td><span class="tag tag-lost">Lost</span></td>
+            <td>Sagun Dulal</td>
+            <td>
+              <a href="#" class="btn btn-primary btn-small">Approve</a>
+              <a href="#" class="btn btn-danger btn-small">Remove</a>
+            </td>
+          </tr>
+          <tr>
+            <td>College ID Card</td>
+            <td>ID Card</td>
+            <td>Main Gate</td>
+            <td><span class="tag tag-found">Found</span></td>
+            <td>Anonymous User</td>
+            <td>
+              <a href="#" class="btn btn-primary btn-small">Approve</a>
+              <a href="#" class="btn btn-danger btn-small">Remove</a>
+            </td>
+          </tr>
+          <tr>
+            <td>Grey Backpack</td>
+            <td>Bag</td>
+            <td>Canteen</td>
+            <td><span class="tag tag-lost">Lost</span></td>
+            <td>Anisha Rai</td>
+            <td>
+              <a href="#" class="btn btn-primary btn-small">Approve</a>
+              <a href="#" class="btn btn-danger btn-small">Remove</a>
+            </td>
+          </tr>
+          <tr>
+            <td>Digital Wristwatch</td>
+            <td>Watch</td>
+            <td>Computer Lab</td>
+            <td><span class="tag tag-pending">Pending Claim</span></td>
+            <td>Bikash Shrestha</td>
+            <td>
+              <a href="#" class="btn btn-primary btn-small">Verify</a>
+              <a href="#" class="btn btn-danger btn-small">Reject</a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h4>BhetiGO</h4>
+          <p style="color:#a4a6b0; font-size:14px;">Campus Lost &amp; Found Management System for Apex College.</p>
+        </div>
+        <div>
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="browse.html">Browse Items</a></li>
+            <li><a href="report-lost.html">Report Lost</a></li>
+            <li><a href="report-found.html">Report Found</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Account</h4>
+          <ul>
+            <li><a href="login.html">Log In</a></li>
+            <li><a href="login.html">Register</a></li>
+            <li><a href="admin.html">Admin Dashboard</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Support</h4>
+          <ul>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        &copy; 2026 BhetiGO — Minor Project by Sagun Dulal, BCSIT 2nd Semester, Apex College.
+      </div>
+    </div>
+  </footer>
+
+<script src="script.js"></script>
+</body>
+</html>

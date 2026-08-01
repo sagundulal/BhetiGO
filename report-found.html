@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Report Found Item | BhetiGO</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <meta name="author" content="Sagun Dulal">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="logo">Bheti<span>GO</span></div>
+    <ul class="nav-links">
+      <li><a href="index.html" class="nav-link">Home</a></li>
+      <li><a href="browse.html" class="nav-link">Browse Items</a></li>
+      <li><a href="report-lost.html" class="nav-link">Report Lost</a></li>
+      <li><a href="report-found.html" class="nav-link active">Report Found</a></li>
+      <li><a href="admin.html" class="nav-link">Admin</a></li>
+      <li><a href="contact.html" class="nav-link">Contact</a></li>
+    </ul>
+    <div class="nav-buttons">
+      <a href="login.html" class="btn btn-outline btn-small">Log In</a>
+      <a href="login.html" class="btn btn-primary btn-small">Register</a>
+    </div>
+  </nav>
+
+  <section id="report-found" class="page active">
+    <div class="section container">
+      <h2 class="section-title">Report a Found Item</h2>
+      <p class="section-subtitle">Found something on campus? Help return it to its owner by posting the details here.</p>
+
+      <div class="form-wrapper">
+        <form action="#" method="POST">
+
+          <div class="form-group">
+            <label for="found-item-name">Item Name</label>
+            <input type="text" id="found-item-name" name="item_name" placeholder="e.g. College ID Card" required>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="found-category">Category</label>
+              <select id="found-category" name="category" required>
+                <option value="">Select category</option>
+                <option value="wallet">Wallet</option>
+                <option value="earphones">Earphones</option>
+                <option value="id-card">ID Card</option>
+                <option value="bag">Bag</option>
+                <option value="watch">Watch</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="date-found">Date Found</label>
+              <input type="date" id="date-found" name="date_found" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="found-location">Location Found</label>
+            <input type="text" id="found-location" name="location" placeholder="e.g. Main Gate, Apex College" required>
+          </div>
+
+          <div class="form-group">
+            <label for="found-description">Description</label>
+            <textarea id="found-description" name="description" rows="4" placeholder="Describe the item so the rightful owner can identify it."></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="found-photo">Upload Photo (optional)</label>
+            <input type="file" id="found-photo" name="photo" accept="image/*">
+          </div>
+
+          <div class="form-group">
+            <label for="found-contact">Your Contact Number</label>
+            <input type="tel" id="found-contact" name="contact" placeholder="98XXXXXXXX" required>
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="width:100%;">Submit Found Item Report</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h4>BhetiGO</h4>
+          <p style="color:#a4a6b0; font-size:14px;">Campus Lost &amp; Found Management System for Apex College.</p>
+        </div>
+        <div>
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="browse.html">Browse Items</a></li>
+            <li><a href="report-lost.html">Report Lost</a></li>
+            <li><a href="report-found.html">Report Found</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Account</h4>
+          <ul>
+            <li><a href="login.html">Log In</a></li>
+            <li><a href="login.html">Register</a></li>
+            <li><a href="admin.html">Admin Dashboard</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Support</h4>
+          <ul>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        &copy; 2026 BhetiGO — Minor Project by Sagun Dulal, BCSIT 2nd Semester, Apex College.
+      </div>
+    </div>
+  </footer>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Home | BhetiGO</title>
+  <title>Browse Items | BhetiGO</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
   <meta name="author" content="Sagun Dulal">
@@ -12,8 +12,8 @@
   <nav class="navbar">
     <div class="logo">Bheti<span>GO</span></div>
     <ul class="nav-links">
-      <li><a href="index.html" class="nav-link active">Home</a></li>
-      <li><a href="browse.html" class="nav-link">Browse Items</a></li>
+      <li><a href="index.html" class="nav-link">Home</a></li>
+      <li><a href="browse.html" class="nav-link active">Browse Items</a></li>
       <li><a href="report-lost.html" class="nav-link">Report Lost</a></li>
       <li><a href="report-found.html" class="nav-link">Report Found</a></li>
       <li><a href="admin.html" class="nav-link">Admin</a></li>
@@ -25,36 +25,29 @@
     </div>
   </nav>
 
-  <section id="home" class="page active">
-
-    <div class="hero">
-      <h1>Lost something on campus? <span>BhetiGO</span> helps you find it.</h1>
-      <p>A simple, organized platform for Apex College students and staff to report,
-        search, and recover lost belongings — from ID cards to earphones.</p>
-      <div class="hero-buttons">
-        <a href="report-lost.html" class="btn btn-primary">Report a Lost Item</a>
-        <a href="report-found.html" class="btn btn-outline">Report a Found Item</a>
-      </div>
-
-      <div class="stats-row">
-        <div class="stat-box">
-          <h2>128</h2>
-          <p>Items Reported</p>
-        </div>
-        <div class="stat-box">
-          <h2>94</h2>
-          <p>Items Returned</p>
-        </div>
-        <div class="stat-box">
-          <h2>310</h2>
-          <p>Registered Users</p>
-        </div>
-      </div>
-    </div>
-
+  <section id="browse" class="page active">
     <div class="section container">
-      <h2 class="section-title">Recently Reported Items</h2>
-      <p class="section-subtitle">The latest lost and found posts from around campus.</p>
+      <h2 class="section-title">Browse Lost &amp; Found Items</h2>
+      <p class="section-subtitle">Search and filter through all reported items.</p>
+
+      <div class="filter-bar">
+        <input type="text" placeholder="Search by item name...">
+        <select>
+          <option value="">All Categories</option>
+          <option value="wallet">Wallet</option>
+          <option value="earphones">Earphones</option>
+          <option value="id-card">ID Card</option>
+          <option value="bag">Bag</option>
+          <option value="watch">Watch</option>
+        </select>
+        <select>
+          <option value="">All Status</option>
+          <option value="lost">Lost</option>
+          <option value="found">Found</option>
+          <option value="pending">Pending Claim</option>
+        </select>
+        <button class="btn btn-primary">Search</button>
+      </div>
 
       <div class="card-grid">
 
@@ -106,38 +99,32 @@
           </div>
         </div>
 
+        <div class="item-card">
+          <div class="item-thumb">👛</div>
+          <div class="item-body">
+            <span class="tag tag-found">Found</span>
+            <h3>Brown Wallet</h3>
+            <p>Cafeteria · 2 July 2026</p>
+            <div class="item-footer">
+              <a href="item-details.html" class="btn btn-outline btn-small">View</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="item-card">
+          <div class="item-thumb">🔑</div>
+          <div class="item-body">
+            <span class="tag tag-lost">Lost</span>
+            <h3>Bunch of Keys</h3>
+            <p>Parking Area · 1 July 2026</p>
+            <div class="item-footer">
+              <a href="item-details.html" class="btn btn-outline btn-small">View</a>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
-
-    <div class="section container">
-      <h2 class="section-title">How BhetiGO Works</h2>
-      <p class="section-subtitle">Three simple steps to report or recover an item.</p>
-
-      <div class="card-grid">
-        <div class="item-card">
-          <div class="item-body">
-            <h3>1. Report</h3>
-            <p>Submit details of an item you lost or found using a simple form with
-              item name, description, date, and location.</p>
-          </div>
-        </div>
-        <div class="item-card">
-          <div class="item-body">
-            <h3>2. Search &amp; Match</h3>
-            <p>Browse or filter posted items by category and location to find a
-              possible match.</p>
-          </div>
-        </div>
-        <div class="item-card">
-          <div class="item-body">
-            <h3>3. Claim &amp; Verify</h3>
-            <p>Send a claim request. The admin verifies ownership before the item
-              is handed over.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
   </section>
 
   <footer class="footer">

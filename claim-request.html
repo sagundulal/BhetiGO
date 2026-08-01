@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Claim Request | BhetiGO</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <meta name="author" content="Sagun Dulal">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="logo">Bheti<span>GO</span></div>
+    <ul class="nav-links">
+      <li><a href="index.html" class="nav-link">Home</a></li>
+      <li><a href="browse.html" class="nav-link active">Browse Items</a></li>
+      <li><a href="report-lost.html" class="nav-link">Report Lost</a></li>
+      <li><a href="report-found.html" class="nav-link">Report Found</a></li>
+      <li><a href="admin.html" class="nav-link">Admin</a></li>
+      <li><a href="contact.html" class="nav-link">Contact</a></li>
+    </ul>
+    <div class="nav-buttons">
+      <a href="login.html" class="btn btn-outline btn-small">Log In</a>
+      <a href="login.html" class="btn btn-primary btn-small">Register</a>
+    </div>
+  </nav>
+
+  <section id="claim-request" class="page active">
+    <div class="section container">
+      <h2 class="section-title">Claim Request</h2>
+      <p class="section-subtitle">You're requesting ownership verification for: <strong>Black Earphones</strong></p>
+
+      <div class="form-wrapper">
+        <form action="#" method="POST">
+
+          <div class="form-group">
+            <label for="claimant-name">Your Full Name</label>
+            <input type="text" id="claimant-name" name="claimant_name" placeholder="e.g. Sagun Dulal" required>
+          </div>
+
+          <div class="form-group">
+            <label for="claimant-roll">Roll Number</label>
+            <input type="text" id="claimant-roll" name="claimant_roll" placeholder="e.g. 2025-bcsit-208" required>
+          </div>
+
+          <div class="form-group">
+            <label for="proof">Proof of Ownership</label>
+            <textarea id="proof" name="proof" rows="4" placeholder="Describe a unique detail only the real owner would know (e.g. scratch mark, sticker, serial number)." required></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="claimant-contact">Contact Number</label>
+            <input type="tel" id="claimant-contact" name="claimant_contact" placeholder="98XXXXXXXX" required>
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="width:100%;">Submit Claim Request</button>
+        </form>
+
+        <p class="form-note">Your claim will be reviewed by the admin before the item is released.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h4>BhetiGO</h4>
+          <p style="color:#a4a6b0; font-size:14px;">Campus Lost &amp; Found Management System for Apex College.</p>
+        </div>
+        <div>
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="browse.html">Browse Items</a></li>
+            <li><a href="report-lost.html">Report Lost</a></li>
+            <li><a href="report-found.html">Report Found</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Account</h4>
+          <ul>
+            <li><a href="login.html">Log In</a></li>
+            <li><a href="login.html">Register</a></li>
+            <li><a href="admin.html">Admin Dashboard</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Support</h4>
+          <ul>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        &copy; 2026 BhetiGO — Minor Project by Sagun Dulal, BCSIT 2nd Semester, Apex College.
+      </div>
+    </div>
+  </footer>
+
+<script src="script.js"></script>
+</body>
+</html>
