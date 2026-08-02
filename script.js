@@ -30,13 +30,16 @@
       document.getElementById(tabId).classList.add('active');
       event.target.classList.add('active');
 
-      const showPassword = document.getElementById("showPassword");
-const passwordInput = document.getElementById("password");
+     const showPassword = document.getElementById("showPassword");
+const passwordInput = document.getElementById("login-password");
 
-if (showPassword && passwordInput) {
-    showPassword.addEventListener("change", function () {
-        passwordInput.type = this.checked ? "text" : "password";
-    });
+console.log(showPassword);
+console.log(passwordInput);
+
+showPassword.addEventListener("change", function () {
+    alert("Checkbox clicked!");
+    passwordInput.type = this.checked ? "text" : "password";
+});
 }
     }
   
