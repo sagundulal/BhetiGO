@@ -593,4 +593,22 @@ img {
     max-width: 300px;
     margin: auto;
   }
+  
+  .show-password {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+.show-password input {
+    cursor: pointer;
+}
+
+.show-password label {
+    cursor: pointer;
+    user-select: none;
+}
 }
